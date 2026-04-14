@@ -657,7 +657,7 @@
           <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-item-label">Email</div>
-            <div class="contact-item-val">sunil@skstechconsulting.com</div>
+            <div class="contact-item-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9cefe9f2f5f0dceff7efe8f9fff4fff3f2efe9f0e8f5f2fbb2fff3f1">[email&#160;protected]</a></div>
           </div>
         </div>
         <div class="contact-item">
@@ -678,27 +678,30 @@
     </div>
 
     <div class="contact-form reveal">
+      <input type="hidden" name="access_key" value="c324a124-d67e-45b0-94de-3b9b980eca40"/>
+      <input type="hidden" name="subject" value="New Contact Form Submission — SKS Technology Solutions"/>
+      <input type="hidden" name="from_name" value="SKS Website Contact Form"/>
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
-          <input type="text" placeholder="Jane"/>
+          <input type="text" id="firstName" name="first_name" placeholder="Jane" required/>
         </div>
         <div class="form-group">
           <label>Last Name</label>
-          <input type="text" placeholder="Smith"/>
+          <input type="text" id="lastName" name="last_name" placeholder="Smith" required/>
         </div>
       </div>
       <div class="form-group">
         <label>Work Email</label>
-        <input type="email" placeholder="jane@company.com"/>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" required/>
       </div>
       <div class="form-group">
         <label>Company</label>
-        <input type="text" placeholder="Your Company"/>
+        <input type="text" id="company" name="company" placeholder="Your Company"/>
       </div>
       <div class="form-group">
         <label>Service Needed</label>
-        <select>
+        <select id="service" name="service">
           <option value="">Select a service...</option>
           <option>QA & Test Automation</option>
           <option>Data Analytics & BA</option>
@@ -709,9 +712,9 @@
       </div>
       <div class="form-group">
         <label>Tell Us About Your Project</label>
-        <textarea placeholder="Briefly describe what you need help with..."></textarea>
+        <textarea id="message" name="message" placeholder="Briefly describe what you need help with..." required></textarea>
       </div>
-      <button class="btn-submit" onclick="handleSubmit(event)">Send Message →</button>
+      <button class="btn-submit" id="submitBtn" onclick="handleSubmit(event)">Send Message →</button>
     </div>
   </div>
 </section>
@@ -727,7 +730,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
@@ -747,17 +750,64 @@
         : 'rgba(247,244,239,0.92)';
   });
 
-  // Form submit
-  function handleSubmit(e) {
+  // Form submit — Web3Forms integration
+  async function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target;
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#0EA5A0';
-    setTimeout(() => {
-      btn.textContent = 'Send Message →';
-      btn.style.background = '';
-    }, 3000);
+    const btn = document.getElementById('submitBtn');
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const company = document.getElementById('company').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+
+    if (!firstName || !email || !message) {
+      btn.textContent = '⚠ Please fill required fields';
+      btn.style.background = '#C55A11';
+      setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; }, 3000);
+      return;
+    }
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    btn.style.background = '#5A6A7A';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'c324a124-d67e-45b0-94de-3b9b980eca40',
+          subject: 'New Contact — SKS Technology Solutions',
+          from_name: 'SKS Website Contact Form',
+          name: `${firstName} ${lastName}`,
+          email: email,
+          company: company,
+          service: service,
+          message: message
+        })
+      });
+      const data = await response.json();
+      if (data.success) {
+        btn.textContent = '✓ Message Sent!';
+        btn.style.background = '#0EA5A0';
+        document.getElementById('firstName').value = '';
+        document.getElementById('lastName').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('company').value = '';
+        document.getElementById('service').value = '';
+        document.getElementById('message').value = '';
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      btn.textContent = '✗ Failed — Try Again';
+      btn.style.background = '#C00000';
+    }
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; }, 4000);
   }
-</script>
-</body>
-</html>
+
+  function handleSubmit_old(e) {
+    e.preventDefault();
+    const btn
