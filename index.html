@@ -742,6 +742,21 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
+  // Clean anchor navigation — no hash in URL
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const hash = this.getAttribute('href');
+      if (hash === '#') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const target = document.querySelector(hash);
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+      history.replaceState(null, '', window.location.pathname);
+    });
+  });
+
   // Nav scroll effect
   window.addEventListener('scroll', () => {
     document.querySelector('nav').style.background =
