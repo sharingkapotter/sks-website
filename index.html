@@ -2713,8 +2713,9 @@ const pages = {
 
 let currentPage = 'home';
 
-function navigate(pageId) {
+function navigate(pageId, pushHistory) {
   if (!pages[pageId]) return;
+  if (pushHistory === undefined) pushHistory = true;
   // Hide all
   Object.values(pages).forEach(p => p.classList.remove('active'));
   // Show target
@@ -2725,9 +2726,26 @@ function navigate(pageId) {
   document.getElementById('mobile-menu').classList.remove('open');
   // Update active nav link
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active-link'));
-  // Update URL hash without scrolling
-  history.replaceState(null, '', '#' + pageId);
+  // Push a new history entry so the back button works;
+  // use replaceState only when called internally (popstate / initial load)
+  if (pushHistory) {
+    history.pushState({ page: pageId }, '', '#' + pageId);
+  }
 }
+
+// Handle browser back / forward buttons
+window.addEventListener('popstate', function(e) {
+  var pageId = (e.state && e.state.page) ? e.state.page : 'home';
+  navigate(pageId, false);
+});
+
+// On initial load: honour the URL hash if present, seed the history entry
+(function() {
+  var hash = location.hash.replace('#', '');
+  var initialPage = pages[hash] ? hash : 'home';
+  history.replaceState({ page: initialPage }, '', '#' + initialPage);
+  navigate(initialPage, false);
+}());
 
 function toggleMenu() {
   document.getElementById('mobile-menu').classList.toggle('open');
