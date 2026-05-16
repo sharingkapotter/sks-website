@@ -2143,9 +2143,49 @@ function toggleMenu() {
 }
 
 function handleFormSubmit(btn) {
+  const form = btn.closest('.contact-form');
+  const firstName = form.querySelector('input[placeholder="First name"]');
+  const lastName  = form.querySelector('input[placeholder="Last name"]');
+  const email     = form.querySelector('input[type="email"]');
+
+  // Clear previous errors
+  [firstName, lastName, email].forEach(f => f.style.borderColor = '');
+
+  let valid = true;
+
+  if (!firstName.value.trim()) {
+    firstName.style.borderColor = '#EF4444';
+    firstName.focus();
+    valid = false;
+  }
+  if (!lastName.value.trim()) {
+    lastName.style.borderColor = '#EF4444';
+    if (valid) lastName.focus();
+    valid = false;
+  }
+  if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+    email.style.borderColor = '#EF4444';
+    if (valid) email.focus();
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  // Show success state
+  const originalHTML = btn.innerHTML;
   btn.disabled = true;
   btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Message Sent!';
   btn.style.background = 'var(--green)';
+
+  // Reset form fields
+  form.querySelectorAll('input, select, textarea').forEach(f => f.value = '');
+
+  // Reset button after 4 seconds
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.innerHTML = originalHTML;
+    btn.style.background = '';
+  }, 4000);
 }
 
 // Handle initial hash
