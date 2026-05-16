@@ -2142,11 +2142,14 @@ function toggleMenu() {
   document.getElementById('mobile-menu').classList.toggle('open');
 }
 
-function handleFormSubmit(btn) {
+async function handleFormSubmit(btn) {
   const form = btn.closest('.contact-form');
   const firstName = form.querySelector('input[placeholder="First name"]');
   const lastName  = form.querySelector('input[placeholder="Last name"]');
   const email     = form.querySelector('input[type="email"]');
+  const org       = form.querySelector('input[placeholder="Company name"]');
+  const service   = form.querySelector('select');
+  const message   = form.querySelector('textarea');
 
   // Clear previous errors
   [firstName, lastName, email].forEach(f => f.style.borderColor = '');
@@ -2171,21 +2174,47 @@ function handleFormSubmit(btn) {
 
   if (!valid) return;
 
-  // Show success state
+  // Show sending state
   const originalHTML = btn.innerHTML;
   btn.disabled = true;
-  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Message Sent!';
-  btn.style.background = 'var(--green)';
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg> Sending...';
+  btn.style.background = 'var(--slate-600)';
 
-  // Reset form fields
-  form.querySelectorAll('input, select, textarea').forEach(f => f.value = '');
+  try {
+    const response = await fetch('https://formspree.io/f/xlgzqoye', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({
+        name: firstName.value.trim() + ' ' + lastName.value.trim(),
+        email: email.value.trim(),
+        organization: org.value.trim(),
+        service: service.value,
+        message: message.value.trim()
+      })
+    });
 
-  // Reset button after 4 seconds
-  setTimeout(() => {
-    btn.disabled = false;
-    btn.innerHTML = originalHTML;
-    btn.style.background = '';
-  }, 4000);
+    if (response.ok) {
+      // Success
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Message Sent!';
+      btn.style.background = 'var(--green)';
+      form.querySelectorAll('input, select, textarea').forEach(f => f.value = '');
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = originalHTML;
+        btn.style.background = '';
+      }, 4000);
+    } else {
+      throw new Error('Failed');
+    }
+  } catch(e) {
+    btn.innerHTML = '⚠ Failed to send. Please email us directly.';
+    btn.style.background = '#EF4444';
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = originalHTML;
+      btn.style.background = '';
+    }, 4000);
+  }
 }
 
 // Handle initial hash
