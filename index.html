@@ -957,7 +957,7 @@ footer{background:var(--navy-900);border-top:1px solid rgba(255,255,255,0.06);pa
           <span class="insight-read">Read Article →</span>
         </div>
       </div>
-      <div class="insight-card" onclick="navigate('insights')">
+      <div class="insight-card" onclick="navigate('article-euai')">
         <div class="insight-img" style="background:linear-gradient(135deg,#0B2E1A,#1A5C35)"><div class="insight-img-inner">⚖️</div></div>
         <div class="insight-body">
           <div class="insight-meta"><span class="badge badge-green">Compliance</span><span class="insight-date">February 2025</span></div>
@@ -1774,7 +1774,7 @@ footer{background:var(--navy-900);border-top:1px solid rgba(255,255,255,0.06);pa
           </div>
         </div>
 
-        <div class="blog-card">
+        <div class="blog-card" onclick="navigate('article-euai')">
           <div class="blog-img eu"><div style="font-size:2.5rem;opacity:0.3">⚖️</div></div>
           <div class="blog-body">
             <div class="blog-meta"><span class="blog-cat">Compliance</span><span class="blog-date">February 2025</span></div>
@@ -1784,7 +1784,7 @@ footer{background:var(--navy-900);border-top:1px solid rgba(255,255,255,0.06);pa
           </div>
         </div>
 
-        <div class="blog-card">
+        <div class="blog-card" onclick="navigate('article-riskregister')">
           <div class="blog-img nist"><div style="font-size:2.5rem;opacity:0.3">📊</div></div>
           <div class="blog-body">
             <div class="blog-meta"><span class="blog-cat">AI Risk</span><span class="blog-date">January 2025</span></div>
@@ -1794,7 +1794,7 @@ footer{background:var(--navy-900);border-top:1px solid rgba(255,255,255,0.06);pa
           </div>
         </div>
 
-        <div class="blog-card">
+        <div class="blog-card" onclick="navigate('article-devsecops')">
           <div class="blog-img devs"><div style="font-size:2.5rem;opacity:0.3">⚙️</div></div>
           <div class="blog-body">
             <div class="blog-meta"><span class="blog-cat">DevSecOps</span><span class="blog-date">December 2024</span></div>
@@ -1804,7 +1804,7 @@ footer{background:var(--navy-900);border-top:1px solid rgba(255,255,255,0.06);pa
           </div>
         </div>
 
-        <div class="blog-card">
+        <div class="blog-card" onclick="navigate('article-api')">
           <div class="blog-img owasp"><div style="font-size:2.5rem;opacity:0.3">🔐</div></div>
           <div class="blog-body">
             <div class="blog-meta"><span class="blog-cat">API Security</span><span class="blog-date">November 2024</span></div>
@@ -2338,6 +2338,360 @@ footer{background:var(--navy-900);border-top:1px solid rgba(255,255,255,0.06);pa
 </div>
 <!-- END ARTICLE 2 -->
 
+<!-- ══════════════ ARTICLE 3: EU AI ACT ══════════════ -->
+<div id="page-article-euai" class="page">
+  <div style="background:linear-gradient(160deg,#1A0B2E,#0F1A40);padding:130px 5vw 60px;border-bottom:1px solid rgba(255,255,255,0.06)">
+    <div style="max-width:780px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
+        <span class="badge badge-green">Compliance</span>
+        <span style="font-size:0.8rem;color:var(--slate-400)">February 2025</span>
+        <span style="font-size:0.8rem;color:var(--slate-400)">· 10 min read</span>
+      </div>
+      <h1 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white);margin-bottom:1rem;line-height:1.2">EU AI Act Readiness: What Enterprise Teams Need to Know Before 2026</h1>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-top:1.5rem">
+        <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--blue-500));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.8rem;flex-shrink:0">SS</div>
+        <div><div style="font-size:0.85rem;font-weight:600;color:var(--white)">Sunil Sodhi</div><div style="font-size:0.75rem;color:var(--slate-400)">Founder, SKS Tech Solutions LLC</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="background:var(--white);padding:60px 5vw">
+    <div style="max-width:780px;margin:0 auto" class="article-body">
+      <p>The EU AI Act is now in force. The prohibited practices provisions took effect in February 2025. High-risk AI system obligations begin applying in August 2026. GPAI model rules are live for providers whose models exceed compute thresholds. If your organization deploys AI in or to the EU market — or processes EU resident data — this is no longer a future compliance problem. It's a current one.</p>
+      <p>This article breaks down what enterprise teams need to understand about the EU AI Act before the August 2026 deadline arrives: how risk tiers work, what high-risk AI system obligations actually require, and where most organizations are falling short in their readiness assessments.</p>
+
+      <h2>How the EU AI Act Classifies Risk</h2>
+      <p>The EU AI Act operates on a risk-based model. Every AI system deployed in the EU market falls into one of four tiers. Getting the classification right is the foundation of everything else — the wrong tier means either over-investing in compliance overhead or being exposed to enforcement penalties.</p>
+
+      <h3>Prohibited AI Practices</h3>
+      <p>These are banned outright as of February 2025. They include AI systems that use subliminal manipulation techniques, exploit vulnerable groups, enable social scoring by public authorities, perform real-time remote biometric identification in public spaces (with narrow exceptions), and AI that infers sensitive attributes like political opinions or sexual orientation from biometric data.</p>
+      <p>Most enterprise organizations won't be running prohibited systems knowingly — but third-party AI tools embedded in HR platforms, marketing automation, and customer analytics are worth auditing against this list. Prohibited use isn't always obvious from a product brochure.</p>
+
+      <h3>High-Risk AI Systems</h3>
+      <p>This is where most enterprise compliance work sits. High-risk AI systems are defined in Annex III of the Act and include AI used in: recruitment and employee management, credit scoring and financial decisions, access to essential services, educational assessment, critical infrastructure management, law enforcement, border control, and administration of justice.</p>
+      <p>If your organization uses AI for resume screening, loan decisions, performance evaluation, or customer eligibility assessments — you're likely operating high-risk AI systems under the Act's definition. The obligations are substantial.</p>
+
+      <h3>Limited and Minimal Risk</h3>
+      <p>Most general-purpose AI applications — chatbots, content generation tools, recommendation engines — fall into limited or minimal risk tiers. Limited risk systems have transparency obligations (users must know they're interacting with AI). Minimal risk systems have no mandatory requirements beyond voluntary codes of conduct.</p>
+
+      <h2>What High-Risk AI System Obligations Actually Require</h2>
+      <p>Articles 9 through 15 of the EU AI Act set out the technical and governance requirements for high-risk AI systems. These aren't aspirational standards — they're legal obligations with conformity assessment requirements before market deployment.</p>
+
+      <h3>Risk Management System (Article 9)</h3>
+      <p>Organizations must establish, implement, and maintain a documented risk management system for each high-risk AI system — covering identification and analysis of known and foreseeable risks, risk estimation and evaluation, and risk management measures. This is an ongoing process, not a one-time assessment. The risk management system must be updated throughout the AI system's lifecycle.</p>
+
+      <h3>Data Governance (Article 10)</h3>
+      <p>Training, validation, and testing datasets must meet data governance and management practices that address design choices, data collection processes, and examination for possible biases. For AI systems that make consequential decisions about people, this means documented data lineage, bias testing, and validation against representative data populations — before deployment.</p>
+
+      <h3>Technical Documentation (Article 11)</h3>
+      <p>High-risk AI systems must maintain technical documentation demonstrating compliance before market placement and throughout the system's lifecycle. This documentation must be updated as the system evolves. The documentation requirements are detailed — covering system architecture, training methodologies, performance metrics, known limitations, and post-market monitoring plans.</p>
+
+      <h3>Human Oversight (Article 14)</h3>
+      <p>High-risk AI systems must be designed to enable effective human oversight. This means the system must be interpretable enough for humans to understand its outputs, humans must be able to intervene or override the system, and the system must support monitoring for anomalies and failures. For many existing AI deployments, this requires architectural changes — not just policy additions.</p>
+
+      <h3>Accuracy, Robustness, and Cybersecurity (Article 15)</h3>
+      <p>High-risk AI systems must achieve appropriate levels of accuracy, robustness, and cybersecurity. The cybersecurity requirement is particularly relevant for LLM-based systems — prompt injection, adversarial inputs, and model manipulation attacks are in scope. Security testing is now an EU AI Act compliance activity, not just a security team concern.</p>
+
+      <h2>GPAI Model Obligations</h2>
+      <p>The General Purpose AI (GPAI) model provisions apply to providers of foundation models — including organizations that fine-tune or deploy general-purpose models with significant capability. Organizations deploying models with training compute above 10^25 FLOPs face additional systemic risk obligations including adversarial testing, incident reporting to the EU AI Office, and cybersecurity measures.</p>
+      <p>For most enterprise users of GPAI models (using OpenAI, Anthropic, Google APIs), the primary obligations fall on the model provider. However, enterprise deployers building on top of GPAI models for high-risk use cases carry their own obligations as the downstream deployer — this distinction matters for contracting and liability allocation.</p>
+
+      <h2>Where Enterprise Readiness Assessments Fall Short</h2>
+      <p>Based on assessment work across organizations preparing for EU AI Act compliance, the most common gaps are:</p>
+      <ul>
+        <li><strong>Incomplete AI inventory.</strong> Organizations cannot accurately classify AI systems they haven't mapped. Shadow AI and embedded third-party AI are the most common sources of unknown high-risk deployments.</li>
+        <li><strong>Misclassification of risk tier.</strong> Particularly common in HR technology and customer-facing AI — organizations classify systems as minimal risk based on their intended use rather than their actual decision impact.</li>
+        <li><strong>Technical documentation that doesn't exist.</strong> The Article 11 documentation requirements assume documentation is maintained throughout development. For systems built before the Act, reconstruction is both difficult and legally risky.</li>
+        <li><strong>Human oversight that is nominal rather than effective.</strong> Having a "human in the loop" who rubber-stamps AI decisions at scale is not effective oversight under the Act's requirements.</li>
+        <li><strong>No post-market monitoring plan.</strong> The EU AI Act requires ongoing monitoring after deployment. Most organizations have no structured mechanism for detecting performance degradation, bias drift, or behavioral anomalies in deployed AI systems.</li>
+      </ul>
+
+      <h2>Practical Starting Points</h2>
+      <p>If your organization hasn't started EU AI Act readiness work, the practical sequence is: complete an AI system inventory, classify each system against Annex III, prioritize high-risk systems for gap assessment against Articles 9–15, identify technical documentation gaps, and establish a human oversight and post-market monitoring framework. Build this into your AI governance program — not as a separate compliance project, but as integrated governance that covers both EU AI Act and NIST AI RMF requirements simultaneously.</p>
+      <p>The August 2026 deadline sounds distant. Documentation reconstruction, architectural changes for human oversight, and conformity assessments take longer than organizations expect. The organizations that are ready by 2026 started their readiness programs in 2024 and 2025.</p>
+
+      <div class="article-author-bio">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--blue-500));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.9rem;flex-shrink:0">SS</div>
+        <div><div style="font-size:0.88rem;font-weight:700;color:var(--slate-900);margin-bottom:0.25rem">Sunil Sodhi</div>
+        <p style="color:var(--slate-600)">Founder of SKS Tech Solutions LLC. SKS Tech Solutions conducts EU AI Act readiness assessments, AI risk classification reviews, and compliance gap analysis for enterprise organizations. <a href="#" onclick="navigate('contact');return false" style="color:var(--blue-500);font-weight:600">Get in touch →</a></p></div>
+      </div>
+      <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--slate-200);display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#" class="btn btn-primary" onclick="navigate('contact');return false">Request an EU AI Act Readiness Review</a>
+        <a href="#" class="btn" style="background:var(--slate-100);color:var(--slate-700)" onclick="navigate('insights');return false">← Back to Insights</a>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem"><img src="updated-sks-logo.png" alt="SKS Tech Solutions LLC" style="height:40px;width:auto"/></div><p>Enterprise AI Governance, AI Security, and DevSecOps consulting.</p></div><div class="footer-col"><h5>Services</h5><ul><li><a onclick="navigate('governance')">AI Governance</a></li><li><a onclick="navigate('security')">LLM Security</a></li><li><a onclick="navigate('services')">API Security</a></li><li><a onclick="navigate('services')">DevSecOps</a></li></ul></div><div class="footer-col"><h5>Company</h5><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('oss')">Open Source</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div><div class="footer-col"><h5>Frameworks</h5><ul><li><a href="#">NIST AI RMF</a></li><li><a href="#">OWASP LLM Top 10</a></li><li><a href="#">EU AI Act</a></li><li><a href="#">ISO/IEC 42001</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 SKS Tech Solutions LLC. All rights reserved.</p><div class="footer-tagline">Built for <span>Enterprise AI Governance</span> &amp; Security</div></div></footer>
+</div>
+<!-- END ARTICLE 3 -->
+
+<!-- ══════════════ ARTICLE 4: AI RISK REGISTER ══════════════ -->
+<div id="page-article-riskregister" class="page">
+  <div style="background:linear-gradient(160deg,#1A0E00,#2E1A00);padding:130px 5vw 60px;border-bottom:1px solid rgba(255,255,255,0.06)">
+    <div style="max-width:780px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
+        <span class="badge badge-amber">AI Risk</span>
+        <span style="font-size:0.8rem;color:var(--slate-400)">January 2025</span>
+        <span style="font-size:0.8rem;color:var(--slate-400)">· 10 min read</span>
+      </div>
+      <h1 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white);margin-bottom:1rem;line-height:1.2">Building an AI Risk Register: A Practical Framework for Enterprise Risk Teams</h1>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-top:1.5rem">
+        <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--blue-500));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.8rem;flex-shrink:0">SS</div>
+        <div><div style="font-size:0.85rem;font-weight:600;color:var(--white)">Sunil Sodhi</div><div style="font-size:0.75rem;color:var(--slate-400)">Founder, SKS Tech Solutions LLC</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="background:var(--white);padding:60px 5vw">
+    <div style="max-width:780px;margin:0 auto" class="article-body">
+      <p>Most enterprise risk teams understand how to manage technology risk. They have frameworks, templates, and escalation paths built over years of handling cybersecurity incidents, vendor failures, and system outages. AI risk doesn't fit neatly into those existing structures — and the organizations trying to force it in are creating blind spots.</p>
+      <p>An AI risk register is not a standard IT risk register with "AI" added to the category column. It requires a different risk taxonomy, different scoring dimensions, and different treatment options. This article covers how to build one that actually functions as a management tool rather than a compliance artifact.</p>
+
+      <h2>Why Standard Risk Registers Don't Work for AI</h2>
+      <p>Traditional IT risk registers are designed around known failure modes: system downtime, data breaches, vendor dependency, configuration errors. AI systems introduce risk categories that don't exist in conventional IT: model drift, bias amplification, adversarial vulnerability, training data poisoning, emergent behaviors in production, and the compounding risk of autonomous agents taking unintended actions.</p>
+      <p>More importantly, AI risk is probabilistic and context-dependent in ways that binary risk assessments handle poorly. A language model's propensity to generate harmful content isn't a fixed characteristic — it varies based on input, context, fine-tuning, and the behaviors of users who interact with it over time. Capturing that as a static risk entry misrepresents the actual exposure.</p>
+
+      <h2>The AI Risk Taxonomy</h2>
+      <p>Before building a register, establish a taxonomy that covers the distinct risk domains in AI deployments. I use six primary categories:</p>
+
+      <h3>1. Security Risk</h3>
+      <p>Vulnerabilities exploitable by external or internal adversaries: prompt injection, model theft, adversarial inputs, data poisoning, supply chain attacks on model providers and training data, and excessive agency in autonomous agents. Security risk maps directly to the OWASP LLM Top 10 and MITRE ATLAS framework.</p>
+
+      <h3>2. Compliance and Regulatory Risk</h3>
+      <p>Non-compliance with applicable AI regulations and standards: EU AI Act obligations, NIST AI RMF alignment requirements, GDPR obligations for AI systems processing personal data, sector-specific requirements in healthcare (FDA guidance on AI/ML-based medical devices), and financial services (SR 11-7 model risk management guidance).</p>
+
+      <h3>3. Operational Risk</h3>
+      <p>Risks to service continuity and operational reliability: model degradation over time, dependency on third-party model providers, performance under adversarial load, hallucination rates in high-stakes decision contexts, and integration failures in AI-augmented workflows.</p>
+
+      <h3>4. Data Risk</h3>
+      <p>Risks arising from data quality, governance, and privacy: training data bias, PII exposure through model outputs, data lineage gaps, consent and purpose limitation issues, and unauthorized data retention in model memory or vector databases.</p>
+
+      <h3>5. Ethical and Reputational Risk</h3>
+      <p>Risks from AI outputs that cause harm or reputational damage: discriminatory outputs, harmful content generation, lack of transparency in AI-assisted decisions, and public backlash from AI misuse — even when technically within policy bounds.</p>
+
+      <h3>6. Third-Party and Supply Chain Risk</h3>
+      <p>Risks from external AI components: foundation model providers, fine-tuning vendors, AI infrastructure providers, plugin and tool ecosystems for agentic AI, and open source model dependencies with unknown provenance.</p>
+
+      <h2>Scoring Dimensions</h2>
+      <p>Standard likelihood × impact scoring works at the category level but misses important AI-specific dimensions. Augment your scoring with:</p>
+      <ul>
+        <li><strong>Velocity</strong> — how quickly could this risk materialize? A prompt injection vulnerability in a customer-facing chatbot can be exploited immediately at scale. A model drift issue develops gradually.</li>
+        <li><strong>Detectability</strong> — how visible is the risk manifesting? Adversarial attacks and bias drift are often invisible without active monitoring. System failures are obvious.</li>
+        <li><strong>Autonomy level</strong> — does a human review AI outputs before they cause impact, or does the system act autonomously? Higher autonomy increases the severity of any materialized risk.</li>
+        <li><strong>Reversibility</strong> — can the impact be reversed? A biased hiring decision is difficult to reverse. A misconfigured content filter can be patched quickly.</li>
+      </ul>
+
+      <h2>Risk Treatment Options</h2>
+      <p>For each risk, the treatment decision must be explicitly documented with an owner and a review date. The four standard options apply, with AI-specific implementation considerations:</p>
+      <ul>
+        <li><strong>Mitigate</strong> — implement a control to reduce likelihood or impact. For security risks this means technical controls (output filtering, rate limiting, access controls). For compliance risks this means process controls (review gates, documentation requirements). Mitigation is the most common treatment but requires control verification to be meaningful.</li>
+        <li><strong>Accept</strong> — document the rationale for accepting the risk at its current level and assign a risk owner. Acceptance requires explicit sign-off, not passive inaction. Low-risk AI systems with minimal consequence should be accepted rather than over-governed.</li>
+        <li><strong>Transfer</strong> — shift financial exposure through insurance or contractual terms with AI vendors. Increasingly available as AI-specific cyber insurance products emerge. Transfer doesn't eliminate the risk — it manages the financial consequence.</li>
+        <li><strong>Avoid</strong> — don't deploy the AI system or capability. The correct treatment for prohibited use cases and for high-risk deployments where mitigation cost exceeds business value.</li>
+      </ul>
+
+      <h2>Making the Register Operational</h2>
+      <p>An AI risk register that lives in a spreadsheet and gets reviewed quarterly is not a risk management tool — it's a compliance artifact. To make it operational:</p>
+      <ul>
+        <li>Link register entries to specific AI systems, not generic risk categories</li>
+        <li>Assign risk owners who have authority to make treatment decisions — not just responsibility to report them</li>
+        <li>Connect MEASURE activities (security testing, bias assessments, performance monitoring) to register update triggers</li>
+        <li>Build escalation thresholds — when a risk score crosses a defined threshold, it automatically escalates to the appropriate decision level</li>
+        <li>Review cadence should match risk velocity — monthly for high-risk systems, quarterly for lower-risk deployments</li>
+      </ul>
+
+      <h2>Board Reporting</h2>
+      <p>Risk committees and boards are increasingly asking for AI risk reporting alongside traditional technology risk disclosures. The AI risk register provides the source data — but board reporting requires translation. Aggregate by risk domain, highlight the highest-severity open items, show trend direction (improving or deteriorating), and connect AI risk exposure to business impact in terms the board understands: regulatory penalty exposure, reputational risk, and operational continuity.</p>
+      <p>The organizations building this capability now will be ahead of the regulatory and governance curve. The ones waiting for a mandate will be scrambling to reconstruct risk histories under time pressure.</p>
+
+      <div class="article-author-bio">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--blue-500));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.9rem;flex-shrink:0">SS</div>
+        <div><div style="font-size:0.88rem;font-weight:700;color:var(--slate-900);margin-bottom:0.25rem">Sunil Sodhi</div>
+        <p style="color:var(--slate-600)">Founder of SKS Tech Solutions LLC. The open source <a href="#" onclick="navigate('oss');return false" style="color:var(--blue-500);font-weight:600">ai-risk-register</a> project provides a structured starting point for enterprise AI risk register implementation, aligned to NIST AI RMF. <a href="#" onclick="navigate('contact');return false" style="color:var(--blue-500);font-weight:600">Get in touch →</a></p></div>
+      </div>
+      <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--slate-200);display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#" class="btn btn-primary" onclick="navigate('contact');return false">Request an AI Risk Assessment</a>
+        <a href="#" class="btn" style="background:var(--slate-100);color:var(--slate-700)" onclick="navigate('insights');return false">← Back to Insights</a>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem"><img src="updated-sks-logo.png" alt="SKS Tech Solutions LLC" style="height:40px;width:auto"/></div><p>Enterprise AI Governance, AI Security, and DevSecOps consulting.</p></div><div class="footer-col"><h5>Services</h5><ul><li><a onclick="navigate('governance')">AI Governance</a></li><li><a onclick="navigate('security')">LLM Security</a></li><li><a onclick="navigate('services')">API Security</a></li><li><a onclick="navigate('services')">DevSecOps</a></li></ul></div><div class="footer-col"><h5>Company</h5><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('oss')">Open Source</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div><div class="footer-col"><h5>Frameworks</h5><ul><li><a href="#">NIST AI RMF</a></li><li><a href="#">OWASP LLM Top 10</a></li><li><a href="#">EU AI Act</a></li><li><a href="#">ISO/IEC 42001</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 SKS Tech Solutions LLC. All rights reserved.</p><div class="footer-tagline">Built for <span>Enterprise AI Governance</span> &amp; Security</div></div></footer>
+</div>
+<!-- END ARTICLE 4 -->
+
+<!-- ══════════════ ARTICLE 5: DEVSECOPS ══════════════ -->
+<div id="page-article-devsecops" class="page">
+  <div style="background:linear-gradient(160deg,#0B2040,#0F2A50);padding:130px 5vw 60px;border-bottom:1px solid rgba(255,255,255,0.06)">
+    <div style="max-width:780px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
+        <span class="badge badge-green">DevSecOps</span>
+        <span style="font-size:0.8rem;color:var(--slate-400)">December 2024</span>
+        <span style="font-size:0.8rem;color:var(--slate-400)">· 10 min read</span>
+      </div>
+      <h1 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white);margin-bottom:1rem;line-height:1.2">Embedding AI Security Testing in CI/CD Pipelines: A DevSecOps Approach</h1>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-top:1.5rem">
+        <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--blue-500));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.8rem;flex-shrink:0">SS</div>
+        <div><div style="font-size:0.85rem;font-weight:600;color:var(--white)">Sunil Sodhi</div><div style="font-size:0.75rem;color:var(--slate-400)">Founder, SKS Tech Solutions LLC</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="background:var(--white);padding:60px 5vw">
+    <div style="max-width:780px;margin:0 auto" class="article-body">
+      <p>Security testing for traditional software has been shifting left for years. SAST in the IDE, DAST in the pipeline, dependency scanning on every commit — these are table stakes in mature DevSecOps programs. AI security testing hasn't followed the same path. Most organizations still treat LLM security as a point-in-time assessment conducted by a security team, separate from the development workflow. That model doesn't scale.</p>
+      <p>When an LLM system is updated — new system prompt, fine-tuning run, retrieval source added, tool integration expanded — its security posture changes. A quarterly red team exercise won't catch a prompt injection vulnerability introduced by a system prompt change deployed on a Tuesday afternoon. Continuous AI security testing, integrated into the CI/CD pipeline, is the only approach that keeps pace with AI system velocity.</p>
+
+      <h2>What's Different About AI Security in the Pipeline</h2>
+      <p>Traditional pipeline security tools — SAST, DAST, secrets scanners — operate on deterministic systems. The same input produces the same output. You can write test assertions, check for specific vulnerability patterns, and fail the build on a definitive finding.</p>
+      <p>LLM security testing is probabilistic. The same injection payload may succeed 60% of the time and fail 40% of the time. Output validation requires semantic understanding, not string matching. This creates genuine engineering challenges for pipeline integration — but they're solvable, and the alternative (no continuous testing) is worse.</p>
+
+      <h2>The AI Security Testing Pipeline Architecture</h2>
+
+      <h3>Stage 1: Pre-Commit — System Prompt and Configuration Validation</h3>
+      <p>Before any code reaches the pipeline, validate AI system configuration changes. System prompts are code — they should be version-controlled and reviewed like code. Pre-commit hooks should:</p>
+      <ul>
+        <li>Flag system prompt changes for security review when they modify permission boundaries, tool access, or safety instructions</li>
+        <li>Scan for hardcoded credentials, API keys, or sensitive data embedded in system prompts</li>
+        <li>Validate that system prompt structure follows established security patterns (clear instruction hierarchy, explicit trust boundaries)</li>
+      </ul>
+
+      <h3>Stage 2: CI — Automated Injection Testing</h3>
+      <p>Every build that changes AI system behavior should trigger an automated injection test suite. This isn't a full red team exercise — it's a regression test suite for known injection vectors. The test suite should cover:</p>
+      <ul>
+        <li>A curated library of direct injection payloads across all LLM01 attack categories</li>
+        <li>System prompt extraction probes — testing whether the system prompt is exposed through standard extraction techniques</li>
+        <li>Policy bypass attempts — testing whether content policy restrictions hold under known bypass patterns</li>
+        <li>Output validation — checking that model outputs don't contain PII patterns, don't execute injected instructions, and remain within expected behavioral bounds</li>
+      </ul>
+      <p>For probabilistic assertions, run each test multiple times and fail the build if the violation rate exceeds a defined threshold — for example, fail if more than 10% of injection probe runs produce policy-violating outputs.</p>
+
+      <h3>Stage 3: Pre-Deployment — Integration and Indirect Injection Testing</h3>
+      <p>Before deploying to production, run a more comprehensive test suite against the integrated system — including RAG pipeline, tool integrations, and multi-turn conversation flows. This stage tests indirect injection vectors that require the full system stack:</p>
+      <ul>
+        <li>Inject malicious payloads into documents that will be indexed in the vector database and retrieved during test conversations</li>
+        <li>Test tool call injection — craft inputs that attempt to manipulate tool parameters through prompt manipulation</li>
+        <li>Validate that retrieval results are processed with appropriate trust boundaries</li>
+        <li>Test multi-turn manipulation sequences that build context across conversation turns</li>
+      </ul>
+
+      <h3>Stage 4: Post-Deployment — Production Monitoring</h3>
+      <p>Continuous monitoring in production is the final layer. This isn't active testing — it's behavioral monitoring of real traffic:</p>
+      <ul>
+        <li>Log and analyze all inputs and outputs for injection attempt patterns</li>
+        <li>Alert on anomalous output patterns — unexpected role shifts, policy violation signals, system prompt echoing</li>
+        <li>Monitor for behavioral drift — compare current model behavior against baseline using periodic automated probes</li>
+        <li>Track vulnerability metrics over time: injection attempt rate, detection rate, false positive rate</li>
+      </ul>
+
+      <h2>Tooling Landscape</h2>
+      <p>The tooling for AI security pipeline integration is maturing but fragmented. Current options include:</p>
+      <ul>
+        <li><strong>Custom test harnesses</strong> — build your own injection test suite using the LLM provider's API directly. Most flexible, highest maintenance cost. Our open source llm-security-assessment framework provides a starting point.</li>
+        <li><strong>Garak</strong> — open source LLM vulnerability scanner from NVIDIA. Covers a wide range of probe categories and integrates with multiple model providers.</li>
+        <li><strong>Commercial AI security platforms</strong> — emerging vendors offering pipeline-integrated LLM security testing. Evaluate carefully — the space is early and marketing claims outpace actual coverage.</li>
+        <li><strong>LLM observability platforms</strong> — tools like Langfuse, Helicone, and Arize provide production monitoring capabilities that support the post-deployment stage.</li>
+      </ul>
+
+      <h2>Governance Integration</h2>
+      <p>Pipeline security gates need governance backing to be effective. Define and document: which security test failures block deployment vs. generate alerts, what the remediation SLA is for different severity findings, who has authority to override a failed security gate, and how security test results feed into the AI risk register.</p>
+      <p>Without governance integration, security gates become obstacles that teams route around rather than controls that reduce risk. The pipeline is the enforcement mechanism — governance defines what gets enforced and why.</p>
+
+      <h2>Starting Point</h2>
+      <p>If your organization has no AI security testing in the pipeline today, the practical starting point is a lightweight injection regression suite at the CI stage — even 20–30 well-chosen test cases covering the highest-priority injection vectors provides meaningful continuous coverage. Build from there as the suite matures and the tooling ecosystem develops.</p>
+      <p>The goal is not a perfect security pipeline on day one. The goal is continuous improvement in coverage and signal quality, integrated into the workflow that AI systems actually move through — not bolted on as a separate process that runs quarterly when the calendar says so.</p>
+
+      <div class="article-author-bio">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--blue-500));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.9rem;flex-shrink:0">SS</div>
+        <div><div style="font-size:0.88rem;font-weight:700;color:var(--slate-900);margin-bottom:0.25rem">Sunil Sodhi</div>
+        <p style="color:var(--slate-600)">Founder of SKS Tech Solutions LLC, specializing in DevSecOps automation, LLM security testing, and AI security pipeline integration for enterprise engineering teams. <a href="#" onclick="navigate('contact');return false" style="color:var(--blue-500);font-weight:600">Get in touch →</a></p></div>
+      </div>
+      <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--slate-200);display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#" class="btn btn-primary" onclick="navigate('contact');return false">Discuss Your DevSecOps Program</a>
+        <a href="#" class="btn" style="background:var(--slate-100);color:var(--slate-700)" onclick="navigate('insights');return false">← Back to Insights</a>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem"><img src="updated-sks-logo.png" alt="SKS Tech Solutions LLC" style="height:40px;width:auto"/></div><p>Enterprise AI Governance, AI Security, and DevSecOps consulting.</p></div><div class="footer-col"><h5>Services</h5><ul><li><a onclick="navigate('governance')">AI Governance</a></li><li><a onclick="navigate('security')">LLM Security</a></li><li><a onclick="navigate('services')">API Security</a></li><li><a onclick="navigate('services')">DevSecOps</a></li></ul></div><div class="footer-col"><h5>Company</h5><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('oss')">Open Source</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div><div class="footer-col"><h5>Frameworks</h5><ul><li><a href="#">NIST AI RMF</a></li><li><a href="#">OWASP LLM Top 10</a></li><li><a href="#">EU AI Act</a></li><li><a href="#">ISO/IEC 42001</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 SKS Tech Solutions LLC. All rights reserved.</p><div class="footer-tagline">Built for <span>Enterprise AI Governance</span> &amp; Security</div></div></footer>
+</div>
+<!-- END ARTICLE 5 -->
+
+<!-- ══════════════ ARTICLE 6: OWASP API ══════════════ -->
+<div id="page-article-api" class="page">
+  <div style="background:linear-gradient(160deg,#0B2E1A,#0F3320);padding:130px 5vw 60px;border-bottom:1px solid rgba(255,255,255,0.06)">
+    <div style="max-width:780px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
+        <span class="badge badge-cyan">API Security</span>
+        <span style="font-size:0.8rem;color:var(--slate-400)">November 2024</span>
+        <span style="font-size:0.8rem;color:var(--slate-400)">· 10 min read</span>
+      </div>
+      <h1 style="font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white);margin-bottom:1rem;line-height:1.2">OWASP API Security Top 10: What's Changed and Why It Matters for AI APIs</h1>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-top:1.5rem">
+        <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--blue-500));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.8rem;flex-shrink:0">SS</div>
+        <div><div style="font-size:0.85rem;font-weight:600;color:var(--white)">Sunil Sodhi</div><div style="font-size:0.75rem;color:var(--slate-400)">Founder, SKS Tech Solutions LLC</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="background:var(--white);padding:60px 5vw">
+    <div style="max-width:780px;margin:0 auto" class="article-body">
+      <p>The OWASP API Security Top 10 was updated in 2023 for good reason — the threat landscape had shifted significantly since the 2019 list. Two new categories were added, several were reorganized, and the framing shifted to better reflect how modern APIs are actually attacked. For teams responsible for AI APIs — inference endpoints, model serving infrastructure, AI-powered application backends — the updated list has specific implications worth understanding.</p>
+      <p>This article covers the key changes in the 2023 update and examines how each category applies to the AI API attack surface, which is meaningfully different from conventional REST API security.</p>
+
+      <h2>What Changed in the 2023 Update</h2>
+      <p>The two most significant additions are <strong>API9:2023 Improper Inventory Management</strong> and <strong>API10:2023 Unsafe Consumption of APIs</strong>. Both are directly relevant to AI deployments.</p>
+      <p>Improper Inventory Management addresses the risk of undocumented, outdated, or shadow API endpoints — a persistent problem in AI infrastructure where model serving endpoints, embedding APIs, and internal inference services proliferate without central governance. Unsafe Consumption of APIs addresses the risk of trusting data from external APIs without sufficient validation — highly relevant for AI agents that consume external data sources and tool call responses.</p>
+      <p>Several 2019 categories were merged or reorganized. Broken Function Level Authorization (API5) is now distinct from Broken Object Level Authorization (API1), reflecting that both remain prevalent but require different testing approaches. Insufficient Logging and Monitoring moved to API8, reflecting its continued importance as both a detection gap and a compliance requirement.</p>
+
+      <h2>The AI API Attack Surface</h2>
+      <p>AI APIs differ from conventional application APIs in several important ways that affect how the OWASP Top 10 categories manifest:</p>
+      <ul>
+        <li><strong>Inference endpoints are stateful in unexpected ways</strong> — LLM APIs maintain conversational context, which creates authorization risks that don't exist in stateless REST APIs. A user who gains access to another user's conversation history has a different kind of exposure than unauthorized access to a data record.</li>
+        <li><strong>Output is non-deterministic</strong> — the same request to an AI API doesn't always produce the same response, which complicates both testing and anomaly detection.</li>
+        <li><strong>The payload is natural language</strong> — injection attacks against AI APIs use natural language rather than SQL or shell syntax, requiring different detection approaches.</li>
+        <li><strong>Rate limiting has model-specific economics</strong> — AI inference is compute-intensive, making API4 (Unrestricted Resource Consumption) a significant cost risk in addition to an availability risk.</li>
+      </ul>
+
+      <h2>Category-by-Category: AI API Implications</h2>
+
+      <h3>API1: Broken Object Level Authorization (BOLA)</h3>
+      <p>In conventional APIs, BOLA means a user can access another user's objects by manipulating identifiers. In AI APIs, this extends to: accessing another user's conversation history, retrieving documents from another user's vector database namespace, and accessing fine-tuned model variants the user isn't authorized to use. Test by substituting user identifiers in all API parameters, including those passed in headers and session tokens.</p>
+
+      <h3>API2: Broken Authentication</h3>
+      <p>AI inference APIs frequently use API key authentication without the additional controls that user-facing applications have — no MFA, no session expiration, no anomaly detection on usage patterns. Leaked API keys for AI services are among the most valuable credentials in bug bounty disclosures. Test for: keys transmitted in URL parameters rather than headers, keys with excessive permissions, absence of key rotation mechanisms, and missing rate limiting per API key.</p>
+
+      <h3>API3: Broken Object Property Level Authorization</h3>
+      <p>For AI APIs, this manifests as exposure of model metadata, system configuration, or internal parameters that should not be accessible to API consumers. Test whether model version information, system prompt fragments, or internal routing parameters are exposed in API responses.</p>
+
+      <h3>API4: Unrestricted Resource Consumption</h3>
+      <p>This is elevated priority for AI APIs due to inference cost. A single unconstrained request to a large model can consume significant compute resources. Beyond DoS risk, unrestricted consumption enables model extraction attacks — an adversary can systematically query a model to reconstruct its behavior, effectively stealing intellectual property. Test for: absence of token limits on requests, missing per-user and per-key rate limits, no cost controls on high-compute operations, and absence of abuse detection on high-volume query patterns.</p>
+
+      <h3>API5: Broken Function Level Authorization</h3>
+      <p>AI platforms increasingly expose administrative functions — model management, fine-tuning triggers, dataset access, user management — through the same API surface as inference. Test whether administrative endpoints are accessible to non-administrative API consumers, whether function-level authorization is enforced independently of object-level authorization, and whether internal model management operations are exposed externally.</p>
+
+      <h3>API8: Security Misconfiguration</h3>
+      <p>AI infrastructure is complex and misconfiguration is common. Common AI API misconfigurations include: model serving infrastructure exposed without authentication, vector databases accessible without authorization, verbose error messages that expose model internals or infrastructure details, CORS misconfigurations that enable cross-origin AI API access, and default credentials on AI management interfaces.</p>
+
+      <h3>API9: Improper Inventory Management</h3>
+      <p>AI systems generate API endpoints that are easy to lose track of: model versioning endpoints, embedding endpoints for different models, internal inference APIs used by AI agents, legacy model endpoints left running after deprecation. Maintain a complete inventory of all AI API endpoints, including internal endpoints, and include them in your API security testing program. Shadow AI APIs — endpoints created by individual teams without central oversight — are a persistent blind spot.</p>
+
+      <h3>API10: Unsafe Consumption of APIs</h3>
+      <p>AI agents consume external APIs as tools — web search, database queries, email, calendar, file systems. The security risk is that agent tool implementations often trust the data returned by these external APIs without sufficient validation. A compromised external API can return malicious content that causes the agent to take unintended actions — a form of indirect prompt injection through tool call responses. Validate all external API responses before they reach the model context, and implement least-privilege tool permissions so agents can only perform actions their current task requires.</p>
+
+      <h2>Testing Approach</h2>
+      <p>API security testing for AI systems should combine standard OWASP API Top 10 testing methodology with AI-specific test cases. Use an OpenAPI specification (if available) to enumerate all endpoints, then test each category systematically — both authenticated and unauthenticated, both with and without valid session context.</p>
+      <p>For AI-specific endpoints, augment standard testing with: conversation context manipulation tests, token limit boundary testing, model metadata extraction probes, and tool call injection for agentic systems. Document findings with the same rigor as conventional API security findings — exact request, exact response, severity rationale, reproduction steps.</p>
+
+      <div class="article-author-bio">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy-700),var(--blue-500));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.9rem;flex-shrink:0">SS</div>
+        <div><div style="font-size:0.88rem;font-weight:700;color:var(--slate-900);margin-bottom:0.25rem">Sunil Sodhi</div>
+        <p style="color:var(--slate-600)">Founder of SKS Tech Solutions LLC, specializing in API security testing, LLM security assessment, and AI security for enterprise engineering teams. <a href="#" onclick="navigate('contact');return false" style="color:var(--blue-500);font-weight:600">Get in touch →</a></p></div>
+      </div>
+      <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--slate-200);display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#" class="btn btn-primary" onclick="navigate('contact');return false">Request an API Security Assessment</a>
+        <a href="#" class="btn" style="background:var(--slate-100);color:var(--slate-700)" onclick="navigate('insights');return false">← Back to Insights</a>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div class="footer-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem"><img src="updated-sks-logo.png" alt="SKS Tech Solutions LLC" style="height:40px;width:auto"/></div><p>Enterprise AI Governance, AI Security, and DevSecOps consulting.</p></div><div class="footer-col"><h5>Services</h5><ul><li><a onclick="navigate('governance')">AI Governance</a></li><li><a onclick="navigate('security')">LLM Security</a></li><li><a onclick="navigate('services')">API Security</a></li><li><a onclick="navigate('services')">DevSecOps</a></li></ul></div><div class="footer-col"><h5>Company</h5><ul><li><a onclick="navigate('about')">About</a></li><li><a onclick="navigate('oss')">Open Source</a></li><li><a onclick="navigate('insights')">Insights</a></li><li><a onclick="navigate('contact')">Contact</a></li></ul></div><div class="footer-col"><h5>Frameworks</h5><ul><li><a href="#">NIST AI RMF</a></li><li><a href="#">OWASP LLM Top 10</a></li><li><a href="#">EU AI Act</a></li><li><a href="#">ISO/IEC 42001</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 SKS Tech Solutions LLC. All rights reserved.</p><div class="footer-tagline">Built for <span>Enterprise AI Governance</span> &amp; Security</div></div></footer>
+</div>
+<!-- END ARTICLE 6 -->
+
 <!-- ══════════════ JAVASCRIPT ══════════════ -->
 <script>
 const pages = {
@@ -2349,8 +2703,12 @@ const pages = {
   insights:       document.getElementById('page-insights'),
   about:          document.getElementById('page-about'),
   contact:        document.getElementById('page-contact'),
-  'article-nist': document.getElementById('page-article-nist'),
-  'article-owasp':document.getElementById('page-article-owasp'),
+  'article-nist':         document.getElementById('page-article-nist'),
+  'article-owasp':        document.getElementById('page-article-owasp'),
+  'article-euai':         document.getElementById('page-article-euai'),
+  'article-riskregister': document.getElementById('page-article-riskregister'),
+  'article-devsecops':    document.getElementById('page-article-devsecops'),
+  'article-api':          document.getElementById('page-article-api'),
 };
 
 let currentPage = 'home';
